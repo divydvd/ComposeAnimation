@@ -139,6 +139,7 @@ fun PullToRefreshSpring(
 
         // Refresh indicator
         if (offsetY.value > 0 || isRefreshing) {
+            val infiniteTransition = rememberInfiniteTransition(label = "refresh")
             val rotation by infiniteTransition.animateFloat(
                 initialValue = 0f,
                 targetValue = 360f,
@@ -648,10 +649,3 @@ fun DraggableReorderableItem(
 // ) {
 //     Text("Drag me to reorder")
 // }
-
-// ========================================
-// HELPER: Infinite Transition (for use in components)
-// ========================================
-
-@Composable
-private fun rememberInfiniteTransition() = rememberInfiniteTransition(label = "infinite")

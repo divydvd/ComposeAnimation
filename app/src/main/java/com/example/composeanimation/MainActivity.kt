@@ -15,6 +15,7 @@ import com.example.composeanimation.ui.theme.AnimationLearningGuide
 import com.example.composeanimation.ui.theme.AnimationTesting
 import com.example.composeanimation.ui.theme.ComplexAnimationExamples
 import com.example.composeanimation.ui.theme.ComposeAnimationTheme
+import com.example.composeanimation.ui.theme.ReusableComponentsDemo
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +30,12 @@ class MainActivity : ComponentActivity() {
 //                     AnimationLearningGuide(modifier = Modifier.padding(innerPadding))
 
                     // 2. Complex Examples - Combined animations (RECOMMENDED FOR INTERVIEW)
-                    ComplexAnimationExamples(modifier = Modifier.padding(innerPadding))
+//                    ComplexAnimationExamples(modifier = Modifier.padding(innerPadding))
 
-                    // 3. Your Original Practice File
+                    // 3. Reusable Components Demo - How to use pre-built components ⭐ NEW
+                    ReusableComponentsDemo()
+
+                    // 4. Your Original Practice File
                     // AnimationTesting(modifier = Modifier.padding(innerPadding))
                 }
             }
