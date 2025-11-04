@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
@@ -102,7 +103,9 @@ fun ShimmerDemo() {
                         .height(200.dp)
                 )
             } else {
-                Card(modifier = Modifier.fillMaxWidth().height(200.dp)) {
+                Card(modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp)) {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
@@ -126,8 +129,12 @@ fun ShimmerDemo() {
                             modifier = Modifier.weight(1f),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            ShimmerEffect(modifier = Modifier.fillMaxWidth().height(16.dp))
-                            ShimmerEffect(modifier = Modifier.fillMaxWidth(0.7f).height(12.dp))
+                            ShimmerEffect(modifier = Modifier
+                                .fillMaxWidth()
+                                .height(16.dp))
+                            ShimmerEffect(modifier = Modifier
+                                .fillMaxWidth(0.7f)
+                                .height(12.dp))
                         }
                     }
                 } else {
@@ -687,7 +694,9 @@ fun TabIndicatorDemo() {
             )
 
             // Content based on tab
-            Card(modifier = Modifier.fillMaxWidth().height(200.dp)) {
+            Card(modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)) {
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
@@ -945,4 +954,10 @@ private fun getColorForListIndex(index: Int): Color {
         3 -> Color(0xFF2196F3)
         else -> Color(0xFF4CAF50)
     }
+}
+
+@Preview
+@Composable
+fun ReusableComponentsDemoPreview() {
+    ReusableComponentsDemo()
 }
